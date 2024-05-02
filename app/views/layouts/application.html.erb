@@ -13,13 +13,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
   </head>
 
-  <body data-turbolinks="false">
-    
+  <body data-turbolinks="false" class="sb-nav-fixed">
+    <div>
 
-    <div class="container">
-      <%= render 'layouts/flash_messages' %>
-
-      <%= yield %>
+      <div class="container">
+        <%= render 'layouts/flash_messages' %>
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>
