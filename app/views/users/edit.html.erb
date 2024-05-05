@@ -1,2 +1,20 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<div class="main users-edit">
+  <div class="container mt-5">
+    <h2 class="form-heading mb-4">アカウント編集</h2>
+    <div class="form users-form">
+      <div class="form-body">
+        <%= form_tag("/users/#{@user.id}/update") do %>
+          <div class="mb-3">
+            <label for="userName" class="form-label">ユーザー名</label>
+            <input type="text" class="form-control" id="userName" name="name" value="<%= @user.name %>">
+          </div>
+          <div class="mb-3">
+            <label for="userEmail" class="form-label">メールアドレス</label>
+            <input type="email" class="form-control" id="userEmail" name="email" value="<%= @user.email %>">
+          </div>
+          <input type="submit" class="btn btn-primary" value="保存">
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

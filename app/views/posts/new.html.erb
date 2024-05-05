@@ -1,0 +1,9 @@
+<%= form_with(model: @post) do |f| %>
+  <div class="mb-3">
+    <div class="form-floating mb-3">
+      <%= f.text_area :content, class: 'form-control mt-2', rows: 5,style: "height: 20rem" %>
+      <label for="message"></label>
+    </div>
+  </div>
+  <%= f.submit 'Post', class: 'btn btn-primary w-100' %>
+<% end %>

@@ -1,0 +1,25 @@
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-5">
+                                <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Login</h3></div>
+                                    <div class="card-body">
+                                        <%= form_with(url: login_path, scope: :session) do |f| %>
+                                            <div class="form-floating mb-3">
+                                                <%= f.email_field :email, class: 'form-control' %>
+                                                <%= f.label :email, 'Email' %>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <%= f.password_field :password, class: 'form-control' %>
+                                                <%= f.label :password, 'Password' %>
+                                            </div>
+                                            <%= f.submit 'Log in', class: 'btn btn-primary w-100' %>
+                                        <% end %>
+                                    </div>
+                                    <div class="card-footer text-center py-3">
+                                        <p>Need an account? <%= link_to 'Sign up now!', signup_path %></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>

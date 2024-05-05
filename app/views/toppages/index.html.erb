@@ -1,10 +1,15 @@
-<div class="bg-secondary p-3 p-sm-5 my-4 rounded">
-  <div class="text-center text-white">
-    <h1>Welcome to the Ekkusu</h1>
-    <div class="d-flex gap-2 mt-3 justify-content-center">
-      <%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary flex-fill' %>
-      <%= link_to 'login!', signup_path, class: 'btn btn-lg btn-primary flex-fill' %>
-    </div>
-    
+<% if logged_in? %>
+  <div class="col-sm-8 w-100">
+    <%= render 'posts/posts', posts: @posts %>
   </div>
-</div>
+<% else %>
+  <div class="bg-secondary p-3 p-sm-5 my-4 rounded">
+    <div class="text-center text-white">
+      <h1>Welcome to the Ekkusu</h1>
+      <div class="d-flex gap-2 mt-3 justify-content-center">
+        <%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary flex-fill' %>
+        <%= link_to 'login!', login_path, class: 'btn btn-lg btn-primary flex-fill' %>
+      </div>
+    </div>
+  </div>
+<% end %>

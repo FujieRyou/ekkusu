@@ -1,0 +1,10 @@
+<div class="container mt-4">
+  <p class="fs-4 mb-3 mt-2">いいね一覧</p>
+  <div class="list-group">
+    <% @favorites.each do |favorite| %>
+      <a href="<%= post_path(favorite.post) %>" class="list-group-item list-group-item-action">
+        <%= favorite.post.title %>
+      </a>
+    <% end %>
+  </div>
+</div>
