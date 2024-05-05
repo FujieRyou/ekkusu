@@ -22,7 +22,7 @@
               </p>
             <% else %>
               <p>
-                <%= link_to post_favorites_path(post.id), method: :post do %>
+                <%= link_to favorites_create_path(post_id: post.id), method: :post do %>
                   ♡<%= post.favorites.count %> いいね
                 <% end %>
               </p>
